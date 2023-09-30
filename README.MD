@@ -28,6 +28,6 @@ pip install -r requirements.txt
 
 ### Requisitos previos
 
-Python3
-Django
-Bootstrap (en carpeta STATIC)
+- Python3
+- Django
+- Bootstrap (en carpeta STATIC)
