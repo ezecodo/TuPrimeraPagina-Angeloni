@@ -1,0 +1,17 @@
+{% extends "web/base.html" %} {% block content %}
+<h2>List of DJs</h2>
+{% for dj in djs %}
+<div>
+  <h3>{{ dj.dj_name }}</h3>
+  <p>{{ dj.genre }}</p>
+  <p>{{ dj.bio }}</p>
+  {% if dj.soundcloud_link %}
+  <p>
+    <a href="{{ dj.soundcloud_link }}" target="_blank">Listen on SoundCloud</a>
+  </p>
+  {% endif %}
+  <a href="{% url 'edit_dj' dj.id %}" class="btn btn-warning">Edit</a>
+  <a href="{% url 'delete_dj' dj.id %}" class="btn btn-danger">Delete</a>
+</div>
+<hr />
+{% endfor %} {% endblock %}

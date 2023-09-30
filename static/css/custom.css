@@ -1,0 +1,26 @@
+body {
+  padding-top: 0; /* Dando un poco más que la altura de la navbar */
+}
+
+.custom-navbar {
+  height: 370px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 0 20px;
+}
+
+.custom-navbar-brand {
+  color: white !important; /* Cambia el color a blanco */
+  font-family: "Arial Rounded MT Bold", sans-serif; /* Ejemplo de una fuente más "joven" */
+  font-size: 50px; /* Tamaño del texto */
+  text-decoration: none !important; /* Elimina cualquier subrayado */
+  transition: color 0.3s; /* Suave transición de color */
+}
+
+.custom-navbar-brand:hover {
+  color: lightgray !important; /* Cambia el color al pasar el mouse por encima */
+}
