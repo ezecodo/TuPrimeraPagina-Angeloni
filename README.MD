@@ -12,7 +12,3 @@ Python3
 Django
 pip
 Bootstrap
-
-# Ejemplo de cómo instalar un requisito previo
-
-pip install nombre_del_paquete
