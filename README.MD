@@ -1,6 +1,17 @@
+# Datos Alumno
+
+Ezequiel Angeloni
+
+PythonFlex by CoderHouse
+Comision 55075
+
 # DJs Emergentes
 
-Es una plataforma para visibilizar a DJs emergentes y así poder darles la oportunidad de conseguir más GIGs
+## Es una plataforma para visibilizar a DJs emergentes y así poder darles la oportunidad de conseguir más GIGs.
+
+- En esta plataforma, se pueden buscar DJs por su nombre, se pueden agregar DJs con su genero musical, y al mismo tiempo se puede agregar un link de SoundCLoud, donde se encuentran los trabajos musicales del/la Dj.
+
+- Al mismo tiempo se puede editar la información ya ingresada de los DJs.
 
 ## Inicio rápido
 
