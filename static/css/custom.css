@@ -44,3 +44,12 @@ body {
   max-height: 200px; /* altura máxima de la imagen */
   object-fit: cover; /* para recortar la imagen si excede las dimensiones */
 }
+
+.soundcloud-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.soundcloud-icon:focus {
+  outline: none;
+}

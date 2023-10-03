@@ -23,10 +23,13 @@
         <p class="card-text">{{ dj.genre }}</p>
         <p class="card-text">{{ dj.bio }}</p>
         {% if dj.soundcloud_link %}
-        <a href="{{ dj.soundcloud_link }}" target="_blank" class="btn btn-info"
-          >Listen on SoundCloud</a
-        >
+        <a href="{{ dj.soundcloud_link }}" target="_blank" data-toggle="tooltip" title="Escucha a {{ dj.dj_name }} en SoundCloud">
+            <img src="{% static 'images/soundcloud_icon.png' %}" alt="Listen on SoundCloud" class="soundcloud-icon">
+        </a>
+        
+        </a>
         {% endif %}
+
         <a href="{% url 'edit_dj' dj.id %}" class="btn btn-warning mt-2"
           >Edit</a
         >
