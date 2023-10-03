@@ -1,6 +1,6 @@
 {% extends "web/base.html" %} {% block content %}
 <h2>Edit DJ</h2>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
   {% csrf_token %} {{ form.as_p }}
   <button type="submit" class="btn btn-primary">Update DJ</button>
 </form>

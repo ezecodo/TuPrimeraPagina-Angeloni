@@ -5,7 +5,7 @@ from .forms import DJForm, SearchForm
 
 def create_dj(request):
     if request.method == "POST":
-        form = DJForm(request.POST)
+        form = DJForm(request.POST, request.FILES)  # Aquí agregamos request.FILES
         if form.is_valid():
             form.save()
             return redirect("create_dj")
@@ -36,7 +36,7 @@ def list_djs(request):
 def edit_dj(request, dj_id):
     dj = get_object_or_404(EmergingDJ, id=dj_id)
     if request.method == "POST":
-        form = DJForm(request.POST, instance=dj)
+        form = DJForm(request.POST, request.FILES, instance=dj)
         if form.is_valid():
             form.save()
             return redirect("list_djs")

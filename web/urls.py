@@ -11,3 +11,6 @@ urlpatterns = [
     path("edit/<int:dj_id>/", views.edit_dj, name="edit_dj"),
     path("delete/<int:dj_id>/", views.delete_dj, name="delete_dj"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

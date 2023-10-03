@@ -10,6 +10,7 @@ class DJForm(forms.ModelForm):
             "music_genre",
             "bio",
             "soundcloud_link",
+            "image",
         ]
 
 

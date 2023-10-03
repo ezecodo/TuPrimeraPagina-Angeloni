@@ -24,3 +24,23 @@ body {
 .custom-navbar-brand:hover {
   color: lightgray !important; /* Cambia el color al pasar el mouse por encima */
 }
+
+.dj-thumbnail {
+  width: 50px; /* Ajusta el ancho según prefieras */
+  height: 50px; /* Ajusta la altura según prefieras */
+  border-radius: 50%; /* Esto hará que la imagen sea redonda */
+  margin-right: 10px; /* Un pequeño margen para separar la imagen del nombre */
+  object-fit: cover; /* Esto asegura que la imagen cubra todo el espacio del contenedor, incluso si no tiene las mismas proporciones */
+}
+
+.dj-card {
+  width: 300px; /* anchura de la tarjeta */
+  margin: 15px; /* espacio alrededor de la tarjeta */
+  display: inline-block; /* para que se alineen horizontalmente */
+}
+
+.dj-card .card-img-top {
+  max-width: 100%; /* para asegurar que la imagen no sobrepase el ancho de la tarjeta */
+  max-height: 200px; /* altura máxima de la imagen */
+  object-fit: cover; /* para recortar la imagen si excede las dimensiones */
+}

@@ -1,17 +1,41 @@
-{% extends "web/base.html" %} {% block content %}
+{% extends "web/base.html" %} {% block content %} {% load static %}
 <h2>List of DJs</h2>
-{% for dj in djs %}
-<div>
-  <h3>{{ dj.dj_name }}</h3>
-  <p>{{ dj.genre }}</p>
-  <p>{{ dj.bio }}</p>
-  {% if dj.soundcloud_link %}
-  <p>
-    <a href="{{ dj.soundcloud_link }}" target="_blank">Listen on SoundCloud</a>
-  </p>
-  {% endif %}
-  <a href="{% url 'edit_dj' dj.id %}" class="btn btn-warning">Edit</a>
-  <a href="{% url 'delete_dj' dj.id %}" class="btn btn-danger">Delete</a>
+
+<div class="row">
+  {% for dj in djs %}
+  <div class="col-md-4 mb-4">
+    <div class="card">
+      {% if dj.image %}
+      <img
+        src="{{ dj.image.url }}"
+        alt="Image of {{ dj.dj_name }}"
+        class="card-img-top"
+      />
+      {% else %}
+      <img
+        src="{% static 'media/dj_images/default.jpg' %}"
+        alt="Default DJ Image"
+        class="card-img-top"
+      />
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{ dj.dj_name }}</h5>
+        <p class="card-text">{{ dj.genre }}</p>
+        <p class="card-text">{{ dj.bio }}</p>
+        {% if dj.soundcloud_link %}
+        <a href="{{ dj.soundcloud_link }}" target="_blank" class="btn btn-info"
+          >Listen on SoundCloud</a
+        >
+        {% endif %}
+        <a href="{% url 'edit_dj' dj.id %}" class="btn btn-warning mt-2"
+          >Edit</a
+        >
+        <a href="{% url 'delete_dj' dj.id %}" class="btn btn-danger mt-2"
+          >Delete</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
-<hr />
-{% endfor %} {% endblock %}
+{% endblock %}
