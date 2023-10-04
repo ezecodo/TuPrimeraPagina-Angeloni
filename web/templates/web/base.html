@@ -20,6 +20,11 @@
         </a>
         
     </nav>
+    <div class="buttons-container mt-3 mb-5 text-center">
+      <a href="{% url 'create_dj' %}" class="btn btn-primary">Añadir un DJ</a>
+      <a href="{% url 'search_dj' %}" class="btn btn-secondary">Buscar un DJ</a>
+      <a href="{% url 'list_djs' %}" class="btn btn-primary">Listar DJs</a>
+  </div>
 
     <div class="container mt-5">{% block content %} {% endblock %}</div>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
